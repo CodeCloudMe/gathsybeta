@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
     if @user.save
       user_photo = UserPhoto.unattached_photo
-      user_photo.update_attributes(user_id: @user.id)
+      #user_photo.update_attributes(user_id: @user.id)
       login_user!(@user)
       redirect_to spaces_url
     else
