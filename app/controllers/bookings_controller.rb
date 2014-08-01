@@ -44,8 +44,8 @@ class BookingsController < ApplicationController
       @booking.approval_status    = Booking.approval_statuses[:unbooked]
 
       night_count = @booking.end_date - @booking.start_date
-      subtotal    = night_count * @booking.booking_rate_daily
-
+     # subtotal    = night_count * @booking.booking_rate_daily
+      subtotal    = night_count * 100
       @booking.service_fee        = subtotal * 0.10
 
       @booking.total              = subtotal + @booking.service_fee

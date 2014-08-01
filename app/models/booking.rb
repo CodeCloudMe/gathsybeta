@@ -35,7 +35,8 @@ class Booking < ActiveRecord::Base
   end
 
   def subtotal
-    self.booking_rate_daily * self.night_count
+    #self.booking_rate_daily * self.night_count
+    100 * self.night_count
   end
 
   def service_fee

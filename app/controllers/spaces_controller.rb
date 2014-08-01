@@ -1,6 +1,6 @@
 class SpacesController < ApplicationController
 
-  before_filter :require_current_user!, only: [:new, :create]
+  before_filter :require_current_user!, only: [:new, :create, :destroy]
 
   def index
 
@@ -39,8 +39,8 @@ class SpacesController < ApplicationController
 
 
     if @space.save
-      space_photo = SpacePhoto.unattached_photo
-      space_photo.update_attributes(space_id: @space.id)
+      #space_photo = SpacePhoto.unattached_photo
+      #space_photo.update_attributes(space_id: @space.id)
       redirect_to @space
     else
       flash.now[:errors] = @space.errors if @space.errors
