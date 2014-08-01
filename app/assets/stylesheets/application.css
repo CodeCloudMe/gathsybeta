@@ -82,10 +82,32 @@ body {
   vertical-align: middle;
   line-height: 45px
 }
+@media (max-width: 600px) {
+
+  #user-banner {
+  display: inline-block;
+  float: left;
+  height: 45px;
+  vertical-align: middle;
+  line-height: 45px
+}
+
+  }
 
 nav > ul > li {
   float: left;
   margin: 0 5px;
+}
+
+@media (max-width: 600px) {
+
+  nav > ul > li {
+
+    float: left;
+    margin: 0 -2px;
+  
+  }
+
 }
 
 #space-booking-rates {

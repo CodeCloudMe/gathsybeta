@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(:version => 20131011174832) do
 
   create_table "space_photos", :force => true do |t|
     t.integer  "space_id"
-    t.string   "url",                            :null => false
-    t.string   "flickr_title",                   :null => false
-    t.string   "flickr_owner_name",              :null => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-    t.integer  "flickr_id",         :limit => 8, :null => false
+    t.string   "url",               :null => false
+    t.string   "flickr_title",      :null => false
+    t.string   "flickr_owner_name", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "flickr_id"
   end
 
   add_index "space_photos", ["flickr_id"], :name => "index_space_photos_on_flickr_id"
@@ -78,12 +78,12 @@ ActiveRecord::Schema.define(:version => 20131011174832) do
 
   create_table "user_photos", :force => true do |t|
     t.integer  "user_id"
-    t.string   "url",                            :null => false
-    t.string   "flickr_title",                   :null => false
-    t.string   "flickr_owner_name",              :null => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-    t.integer  "flickr_id",         :limit => 8, :null => false
+    t.string   "url",               :null => false
+    t.string   "flickr_title",      :null => false
+    t.string   "flickr_owner_name", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "flickr_id"
   end
 
   add_index "user_photos", ["flickr_id"], :name => "index_user_photos_on_flickr_id"
@@ -94,8 +94,8 @@ ActiveRecord::Schema.define(:version => 20131011174832) do
     t.string   "password_digest", :null => false
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.string   "first_name",      :null => false
-    t.string   "last_name",       :null => false
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "session_token"
     t.string   "photo_url"
     t.integer  "user_photo_id"

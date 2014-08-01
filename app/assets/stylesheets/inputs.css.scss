@@ -80,6 +80,7 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+
 /* TEXTAREA */
 
 textarea {
@@ -106,6 +107,20 @@ select {
   border-radius: 2px;
   background: url(down-arrow.png) no-repeat right #ddd;
   padding-right: 33px;
+}
+
+
+@media (max-width: 600px) {
+  select {
+    background: #DDD;
+    -webkit-appearance: none;
+    padding: 9px 18px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    background: url(down-arrow.png) no-repeat right #ddd;
+    padding-right: 33px;
+    display:block;
+  }
 }
 
 /* NUMBER INPUT */

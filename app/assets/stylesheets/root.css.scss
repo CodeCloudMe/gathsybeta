@@ -22,16 +22,34 @@
   top: 250px;
   right: 300px
 }
+@media (max-width: 900px) {
+  #root-page-search-bar-container {
+  position: absolute;
+  min-width: 615px;
+  top: 150px;
+  left: 30px
+}
+}
 
 #root-page-search-bar-container > h1, h3 {
   font-weight: bold;
   color: white;
 }
 
+
 #root-page-search-bar-container > h1 {
   font-size: 48px;
   text-shadow: 0px 0px 40px black;
   -webkit-text-stroke: 0.2px #333;
+}
+
+@media (max-width: 500px) {
+
+
+#root-page-search-bar-container > h1{
+  font-size:30px
+}
+
 }
 
 #root-page-search-bar-container > h3 {
@@ -49,6 +67,12 @@
   width: auto;
 }
 
+@media (max-width: 900px) {
+  #root-page-search-bar {
+    width: 45%;
+  }
+}
+
 #header-button {
   font-size: 15px;
   margin: 5px;
@@ -57,6 +81,12 @@
 #root-input-city-name {
   margin-left: 5px;
   width: 320px;
+}
+@media (max-width: 900px) {
+  #root-input-city-name {
+     width:82%;
+
+  }
 }
 
 #search-button {
