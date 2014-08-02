@@ -55,7 +55,7 @@ body {
   margin: 20px auto;
   min-width: 10px;
   border-radius: 30px;
-  padding: 20px;
+  padding: 20px 0;
   }
 }
 
@@ -67,6 +67,17 @@ body {
   min-width: 10px;
   border-radius: 30px;
   padding: 20px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+  background: white;
+  width: 100%;
+  margin: 20px auto;
+  min-width: 10px;
+  border-radius: 30px;
+  padding: 20px;
   }
 }
 #errors-notices {

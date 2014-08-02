@@ -37,6 +37,16 @@ section {
 
   #spaces-index-list {
   float:left;
+  width: 64.333%;
+}
+
+}
+
+@media (max-width: 600px) {
+
+  #spaces-index-list {
+  float:left;
+  width: 100%;
 }
 
 }
