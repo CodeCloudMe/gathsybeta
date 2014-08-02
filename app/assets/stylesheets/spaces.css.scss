@@ -15,6 +15,9 @@ section {
 }
 
 }
+
+
+
 .left-sidebar {
   float:left;
   width:250px;
@@ -29,7 +32,8 @@ section {
   float: right;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1140px) {
 
   #spaces-index-list {
   float:left;
@@ -41,6 +45,24 @@ section {
   width: 720px;
   padding: 10px;
   border-bottom: 1px solid #CCC;
+}
+
+@media (max-width: 1040px) {
+.list-item {
+width: 100%;
+padding: 10px 0 10px;
+border-bottom: 1px solid #CCC;
+margin: 0 auto;
+}
+}
+
+@media (max-width: 420px) {
+.list-item {
+width: 100%;
+padding: 10px 0 10px;
+border-bottom: 1px solid #CCC;
+margin: 0 auto;
+}
 }
 
 .list-item:first-child {
