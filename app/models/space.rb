@@ -27,24 +27,32 @@ class Space < ActiveRecord::Base
   primary_key: :user_id
 
   def self.booking_rates
-    ["Daily"]
+    ["Hourly"]
   end
 
   def self.residence_types
-    ["Apartment",
-     "House",
-     "Bed & Breakfast"]
+    ["Residence",
+     "Event Space",
+     "Hotel Event Space",
+     "Restaurant",
+     "Bar",
+     "Gallery",
+     "Banquet Hall",
+     "Penthouse",
+     "Loft",
+     "Storefront",
+     "Other"]
   end
 
-  def self.room_types
-    ["Entire home/apt",
-     "Private room",
-     "Shared room"]
-  end
+  # def self.room_types
+  #   ["Entire home/apt",
+  #    "Private room",
+  #    "Shared room"]
+  # end
 
-  def self.bed_types
-    ["Real Bed"]
-  end
+  # def self.bed_types
+  #   ["Real Bed"]
+  # end
 
   def self.numerical_options
     ["10","20","50","75","100","150","200","250","300","350","400","450","500","1000","2000","3000","4000","10000"]
@@ -54,34 +62,34 @@ class Space < ActiveRecord::Base
     ["1","2","3","4","5","6","7","8","9","10","15","20","30","50","100","200+"]
   end
 
-  def self.numerical_options_bathrooms
-    ["1","2","3","4","5","6","7","8","9","10","15","20","30","50","100","200+"]
-  end
+  # def self.numerical_options_bathrooms
+  #   ["1","2","3","4","5","6","7","8","9","10","15","20","30","50","100","200+"]
+  # end
 
   def self.amenities_list
-    ["Smoking Allowed",
-     "Pets Allowed",
-     "TV",
+    ["Indoor",
+     "Outdoor",
+     "Rooftop",
      "Cable TV",
-     "Internet",
-     "Wireless Internet",
+     "In-house Catering",
+     "Outside Catering",
      "Air Conditioning",
      "Heating",
      "Elevator in Building",
      "Handicap Accessible",
-     "Pool",
-     "Kitchen",
-     "Free parking on premise",
-     "Doorman",
-     "Gym",
-     "Hot Tub",
-     "Indoor Fireplace",
-     "Buzzer/Wireless Intercom",
-     "Breakfast",
-     "Family/Kid Friendly",
-     "Suitable for Events",
-     "Washer",
-     "Dryer"]
+     "Full Bar",
+     "Parking",
+     "Furniture",
+     "Security"]
+     # "Gym",
+     # "Hot Tub",
+     # "Indoor Fireplace",
+     # "Buzzer/Wireless Intercom",
+     # "Breakfast",
+     # "Family/Kid Friendly",
+     # "Suitable for Events",
+     # "Washer",
+     # "Dryer"]
   end
 
   def self.integer_from_options_list(options_list)

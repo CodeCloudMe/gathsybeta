@@ -1,3 +1,4 @@
+<!-- This is being edited without also changing the data info for the sake of time. In other words this is a bunch of programming debt being accumulated. -->
 <form class="group" action="<%= spaces_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
@@ -35,53 +36,53 @@
                        class: "input-long input-small",
                           id: "space-description" %></textarea><br>
 
-  <label for="space-house-rules" class="top">House Rules</label>
+  <label for="space-house-rules" class="top">Rules</label>
     <%= tag "textarea", name: "space[house_rules]",
                  placeholder: "Please don't tear up my place.",
                        class: "input-long input-small",
                           id: "space-house-rules" %></textarea><br>
 
-  <label for="space-booking_rates">Daily Rental Rate</label>
+  <label for="space-booking_rates">Hourly Rental Rate</label>
     <%= tag "input", type: "number",
     name: "space[booking_rate_daily]",
               placeholder: "50",
                     class: "number-input input-long input-small",
                         id: "space-booking-rate-daily" %><br>
 
-  <label for="space-residence-type">Home Type</label>
+  <label for="space-residence-type">Space Type</label>
     <select type="text" name="space[residence_type]" id="space-residence-type">
       <% Space.residence_types.each_with_index do |residence_type, index| %>
         <option value="<%= index %>"><%= residence_type %></option>
       <% end %>
     </select><br>
 
-  <label for="space-bedroom-count">Bedroom Count</label>
+  <!-- <label for="space-bedroom-count">Bedroom Count</label>
     <select type="text" name="space[bedroom_count]" id="space-bedroom-count">
       <% Space.numerical_options_rooms.each_with_index do |bedroom_count, index| %>
         <option value="<%= index %>"><%= bedroom_count %></option>
       <% end %>
-    </select><br>
+    </select><br> -->
 
-  <label for="space-bathroom-count">Bathroom Count</label>
+  <!-- <label for="space-bathroom-count">Bathroom Count</label>
     <select type="text" name="space[bathroom_count]" id="space-bedroom-count">
       <% Space.numerical_options_bathrooms.each_with_index do |bathroom_count, index| %>
         <option value="<%= index %>"><%= bathroom_count %></option>
       <% end %>
     </select><br>
-
-  <label for="space-room-type">Room Type</label>
+ -->
+  <label for="space-room-type">Square Footage</label>
     <select type="text" name="space[room_type]" id="space-room-type">
       <% Space.room_types.each_with_index do |room_type, index| %>
         <option value="<%= index %>"><%= room_type %></option>
       <% end %>
     </select><br>
 
-  <label for="space-bed-type">Bed Type</label>
+  <!-- <label for="space-bed-type">Bed Type</label>
     <select type="text" name="space[bed_type]" id="space-bed-type">
       <% Space.bed_types.each_with_index do |bed_type, index| %>
         <option value="<%= index %>"><%= bed_type %></option>
       <% end %>
-    </select><br>
+    </select><br> -->
 
   <label for="space-accomodates">Accommodates</label>
     <select type="text" name="space[accommodates]" id="space-accomodates">
