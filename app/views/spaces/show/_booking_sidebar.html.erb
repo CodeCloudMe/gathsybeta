@@ -8,7 +8,7 @@
         <sup class="left">$</sup>
         <%= @space.booking_rate_daily %>
       </div>
-      <div class="light-gray">per night</div>
+      <div class="light-gray">per hour</div>
     </div>
   </div>
 
@@ -28,9 +28,24 @@
 
     <h4 class="sidebar-section-header">Guest count</h4>
     <div class="sidebar-section group">
-      <%= select_numerical_given_options(html_name: "booking[guest_count]",
+      <!--<%= select_numerical_given_options(html_name: "booking[guest_count]",
                                             limits: [1, @space.accommodates],
-                                       plural_noun: "guests") %>
+                                       plural_noun: "guests") %>-->
+               
+
+  
+    <select type="text" name="space[accommodates]" id="space-accomodates">
+    
+
+      <% Space.numerical_options.each_with_index  do |accomodates, index|  %>
+        <% if Integer(accomodates) <= Integer(@space.accommodates) %>
+        <option value="<%= accomodates %>"><%= accomodates %></option>
+        <% end %>
+      <% end %>
+
+
+
+    </select>
     </div>
 
     <input type="hidden" name="booking[space_id]" value="<%= @space.id %>">

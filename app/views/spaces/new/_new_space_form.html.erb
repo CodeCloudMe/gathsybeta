@@ -43,8 +43,10 @@
 
   <label for="space-booking_rates">Daily Rental Rate</label>
     <%= tag "input", type: "number",
+    name: "space[booking_rate_daily]",
               placeholder: "50",
-                    class: "number-input input-long input-small"%><br>
+                    class: "number-input input-long input-small",
+                        id: "space-booking-rate-daily" %><br>
 
   <label for="space-residence-type">Home Type</label>
     <select type="text" name="space[residence_type]" id="space-residence-type">
@@ -55,14 +57,14 @@
 
   <label for="space-bedroom-count">Bedroom Count</label>
     <select type="text" name="space[bedroom_count]" id="space-bedroom-count">
-      <% Space.numerical_options.each_with_index do |bedroom_count, index| %>
+      <% Space.numerical_options_rooms.each_with_index do |bedroom_count, index| %>
         <option value="<%= index %>"><%= bedroom_count %></option>
       <% end %>
     </select><br>
 
   <label for="space-bathroom-count">Bathroom Count</label>
     <select type="text" name="space[bathroom_count]" id="space-bedroom-count">
-      <% Space.numerical_options.each_with_index do |bathroom_count, index| %>
+      <% Space.numerical_options_bathrooms.each_with_index do |bathroom_count, index| %>
         <option value="<%= index %>"><%= bathroom_count %></option>
       <% end %>
     </select><br>
@@ -84,7 +86,7 @@
   <label for="space-accomodates">Accommodates</label>
     <select type="text" name="space[accommodates]" id="space-accomodates">
       <% Space.numerical_options.each_with_index do |accomodates, index| %>
-        <option value="<%= index %>"><%= accomodates %></option>
+        <option value="<%= accomodates%>"><%= accomodates %></option>
       <% end %>
     </select><br>
 
