@@ -31,3 +31,5 @@ gem 'faker'
 gem 'newrelic_rpm'
 gem 'launchy'
 gem 'kaminari'
+
+#same page 
