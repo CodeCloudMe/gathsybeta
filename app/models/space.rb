@@ -44,15 +44,15 @@ class Space < ActiveRecord::Base
      "Other"]
   end
 
-  # def self.room_types
-  #   ["Entire home/apt",
-  #    "Private room",
-  #    "Shared room"]
-  # end
+  def self.room_types
+    ["Hall",
+    "Private Room",
+     "Chairs"]
+ end
 
-  # def self.bed_types
-  #   ["Real Bed"]
-  # end
+  def self.bed_types
+    ["Real Bed"]
+  end
 
   def self.numerical_options
     ["10","20","50","75","100","150","200","250","300","350","400","450","500","1000","2000","3000","4000","10000"]
