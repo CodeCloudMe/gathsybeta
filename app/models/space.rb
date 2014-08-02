@@ -69,7 +69,6 @@ class Space < ActiveRecord::Base
     ["Indoor",
      "Outdoor",
      "Rooftop",
-     "Cable TV",
      "In-house Catering",
      "Outside Catering",
      "Air Conditioning",
@@ -79,7 +78,8 @@ class Space < ActiveRecord::Base
      "Full Bar",
      "Parking",
      "Furniture",
-     "Security"]
+     "Security",
+     "A/V equipment"]
   
   end
 
