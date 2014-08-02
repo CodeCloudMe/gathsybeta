@@ -80,16 +80,8 @@ class Space < ActiveRecord::Base
      "Full Bar",
      "Parking",
      "Furniture",
-     "Security"]
-     # "Gym",
-     # "Hot Tub",
-     # "Indoor Fireplace",
-     # "Buzzer/Wireless Intercom",
-     # "Breakfast",
-     # "Family/Kid Friendly",
-     # "Suitable for Events",
-     # "Washer",
-     # "Dryer"]
+     "Security1"]
+  
   end
 
   def self.integer_from_options_list(options_list)
