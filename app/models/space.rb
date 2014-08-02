@@ -79,7 +79,8 @@ class Space < ActiveRecord::Base
      "Parking",
      "Furniture",
      "Security",
-     "A/V equipment"]
+     "A/V equipment",
+     "Kosher Available"]
   
   end
 
