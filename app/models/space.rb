@@ -45,8 +45,8 @@ class Space < ActiveRecord::Base
   end
 
   def self.room_types
-    ["<100 sq.",
-    ">100"]
+    ["-100 sq.",
+    "+100 sq."]
  end
 
   def self.bed_types
