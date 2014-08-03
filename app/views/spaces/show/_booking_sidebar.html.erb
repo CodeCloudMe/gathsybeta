@@ -15,16 +15,48 @@
   <form action="<%= bookings_url %>" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
+    <p id="datepairExample">
 
-    <h4 class="sidebar-section-header">Check in</h4>
-    <div class="sidebar-section group">
-        <input type="date" name="booking[start_date]" class="date-input input-small sidebar-full-width">
-    </div>
+      <h4 class="sidebar-section-header">Start</h4>
+      <div class="sidebar-section group">
+          <input type="text" name="booking[start_date]" class="date start" placeholder="Date">
 
-    <h4 class="sidebar-section-header">Check out</h4>
-    <div class="sidebar-section group">
-        <input type="date" name="booking[end_date]" class="date-input input-small sidebar-full-width" input-small sidebar-half-width>
-    </div>
+          <input type="text" class="time start" placeholder="Time" />
+
+      </div>
+
+      <h4 class="sidebar-section-header">End</h4>
+      <div class="sidebar-section group">
+          <input type="text" name="booking[end_date]" class="date end" placeholder="Date">
+          <input type="text" class="time end" placeholder="Time" />
+      </div>
+
+
+    </p>
+
+     <link rel="stylesheet" type="text/css" href="/js/jquery.timepicker.css" />
+      <link rel="stylesheet" type="text/css" href="/js/bootstrap-datepicker.css" />
+
+
+    <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/js/datepair.js"></script>
+    <script type="text/javascript" src="/js/jquery.datepair.js"></script>
+    <script>
+        // initialize input widgets first
+        $('.time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
+
+        $('.date').datepicker({
+            'format': 'yyyy-m-d',
+            'autoclose': true
+        });
+
+        // initialize datepair
+        $('#datepairExample').datepair();
+    </script>
 
     <h4 class="sidebar-section-header">Guest count</h4>
     <div class="sidebar-section group">
