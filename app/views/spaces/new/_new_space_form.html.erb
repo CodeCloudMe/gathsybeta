@@ -38,8 +38,9 @@
 
   <label for="space-house-rules" class="top">Rules</label>
     <%= tag "textarea", name: "space[house_rules]",
-                 placeholder: "Please don't tear up my place.",
+                 placeholder: "No Pets Allowed",
                        class: "input-long input-small",
+                        value:"No Pets Allowed",
                           id: "space-house-rules" %></textarea><br>
 
   <label for="space-booking_rates">Hourly Rental Rate</label>
@@ -62,6 +63,53 @@
         <option value="<%= index %>"><%= room_type %></option>
       <% end %>
     </select><br>
+
+     <label for="space-bedroom-count" style="display:none">Bedroom Count</label>
+    <select type="text" name="space[bedroom_count]" id="space-bedroom-count" style="display:none">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+        <option value="5">6</option>
+        <option value="6">7</option>
+        <option value="7">8</option>
+        <option value="8">9</option>
+        <option value="9">10</option>
+        <option value="10">15</option>
+        <option value="11">20</option>
+        <option value="12">30</option>
+        <option value="13">50</option>
+        <option value="14">100</option>
+        <option value="15">200+</option>
+    </select><br>
+
+  <label for="space-bathroom-count" style="display:none">Bathroom Count</label>
+    <select type="text" name="space[bathroom_count]" id="space-bedroom-count" style="display:none">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+        <option value="5">6</option>
+        <option value="6">7</option>
+        <option value="7">8</option>
+        <option value="8">9</option>
+        <option value="9">10</option>
+        <option value="10">15</option>
+        <option value="11">20</option>
+        <option value="12">30</option>
+        <option value="13">50</option>
+        <option value="14">100</option>
+        <option value="15">200+</option>
+    </select>
+    <label for="space-bed-type" style="display:none">Bed Type</label>
+    <select type="text" name="space[bed_type]" id="space-bed-type" style="display:none">
+        <option value="0">Real Bed</option>
+    </select>
+
+
+
 
   <!-- <label for="space-bed-type">Bed Type</label>
     <select type="text" name="space[bed_type]" id="space-bed-type">
