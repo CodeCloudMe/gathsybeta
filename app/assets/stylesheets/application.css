@@ -71,16 +71,16 @@ body {
 }
 
 @media (max-width: 484px) {
-  .main {
-  background: white;
-  width: 100%;
-  margin: 20px auto;
-  min-width: 10px;
-  border-radius: 30px;
-  padding: 20px;
-  }
+ .main {
+background: white;
+width: 95%;
+margin: 20px auto;
+min-width: 10px;
+border-radius: 30px;
+padding: 6px;
 }
-@media (max-width: 320px) {
+}
+/*@media (max-width: 320px) {
   .main {
   background: white;
   width: 82%;
@@ -89,7 +89,7 @@ body {
   border-radius: 30px;
   padding: 10px;
   }
-}
+}*/
 #errors-notices {
   background: white;
   width: 1000px;
