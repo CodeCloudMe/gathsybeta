@@ -1,7 +1,10 @@
 <li class="group list-item">
 
   <a href=<%= space_url(space.id) %> class="space-image-wrapper">
-    <%= image_tag(space.photo_medium, class: "space-image space-image-small") %>
+   
+    <% if space.placeavatar1? %>
+    <%= image_tag(space.placeavatar1_url , class: "space-image space-image-small") %>
+    <% end %>
     <span class="map-number"><%= space_counter + 1 %></span>
   </a>
 

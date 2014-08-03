@@ -1,12 +1,14 @@
 class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :photo_url,
-                  :password, :password_confirmation, :session_token
+                  :password, :password_confirmation, :session_token, :avatar, :remote_avatar_url, :avatar_cache, :remove_avatar
 
   has_secure_password
 
   validates :first_name, :last_name, :email, :session_token, presence: true
   validates_uniqueness_of :email
   validates_presence_of :password, on: :create
+
+  mount_uploader :avatar, AvatarUploader
 
   after_initialize :ensure_session_token
 

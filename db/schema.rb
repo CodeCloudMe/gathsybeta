@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131011174832) do
+ActiveRecord::Schema.define(:version => 20140803225658) do
 
   create_table "bookings", :force => true do |t|
     t.integer  "user_id",            :null => false
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20131011174832) do
     t.datetime "updated_at",           :null => false
     t.string   "photo_url"
     t.integer  "space_photo_id"
+    t.string   "placeavatar1"
   end
 
   add_index "spaces", ["booking_rate_daily"], :name => "index_spaces_on_booking_rate_daily"
@@ -99,6 +100,7 @@ ActiveRecord::Schema.define(:version => 20131011174832) do
     t.string   "session_token"
     t.string   "photo_url"
     t.integer  "user_photo_id"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

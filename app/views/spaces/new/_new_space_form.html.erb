@@ -1,5 +1,5 @@
 <!-- This is being edited without also changing the data info for the sake of time. In other words this is a bunch of programming debt being accumulated. -->
-<form class="group" action="<%= spaces_url %>" method="post">
+<form class="group" action="<%= spaces_url %>" method="post" enctype='multipart/form-data'>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <label for="space-title">Space Title</label>
@@ -135,6 +135,11 @@
         </li>
       <% end %>
     </ul><br>
+
+
+    <label for="placeavatar1">Main Photo</label>
+<input type="file" name="space[placeavatar1]" id="file"><br>
+
 
   <input type="submit" class="button blue input-large label-offset-button" value="Create space">
 </form>

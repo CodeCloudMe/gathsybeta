@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -31,5 +31,4 @@ gem 'faker'
 gem 'newrelic_rpm'
 gem 'launchy'
 gem 'kaminari'
-
-#same page
+gem 'carrierwave'
