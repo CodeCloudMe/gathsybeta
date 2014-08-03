@@ -107,7 +107,15 @@ margin: 0 auto;
 .list-item > .price-wrapper > .price-data > sup {
   font-size: 24px;
 }
+@media (max-width: 420px;) {
+.list-item > .price-wrapper > .price-data {
+  font-size: 20px;
+}
 
+.list-item > .price-wrapper > .price-data > sup {
+  font-size: 20px;
+}
+}
 .list-item > .price-wrapper > div {
   display: block;
   font-size: 13px;

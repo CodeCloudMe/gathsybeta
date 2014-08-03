@@ -80,6 +80,16 @@ body {
   padding: 20px;
   }
 }
+@media (max-width: 320px) {
+  .main {
+  background: white;
+  width: 82%;
+  margin: 20px auto;
+  min-width: 10px;
+  border-radius: 30px;
+  padding: 20px;
+  }
+}
 #errors-notices {
   background: white;
   width: 1000px;
