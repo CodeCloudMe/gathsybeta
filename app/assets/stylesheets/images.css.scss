@@ -33,6 +33,31 @@ img {
   border: 1px solid #DDD;
   border-radius: 2px;
 }
+@media (max-width: 680px) {
+.space-image {
+float: left;
+width: 25%;
+padding: 3px;
+border: none;
+border-radius: 2px;
+height: auto;
+margin-right: 5px;
+}
+
+}
+
+@media (max-width: 484px) {
+.space-image {
+float: left;
+width: 25%;
+padding: 3px;
+border: none;
+border-radius: 2px;
+height: auto;
+margin-right: 5px;
+}
+
+}
 
 .host-image {
   float: left;

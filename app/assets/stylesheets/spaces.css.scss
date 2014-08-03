@@ -9,12 +9,15 @@ section {
 .sidebar {
   width:250px;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
 .sidebar {
   display:none;
 }
 
 }
+
+
+
 .left-sidebar {
   float:left;
   width:250px;
@@ -29,10 +32,21 @@ section {
   float: right;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1140px) {
 
   #spaces-index-list {
   float:left;
+  width: 64.333%;
+}
+
+}
+
+@media (max-width: 720px) {
+
+  #spaces-index-list {
+  float:left;
+  width: 100%;
 }
 
 }
@@ -41,6 +55,24 @@ section {
   width: 720px;
   padding: 10px;
   border-bottom: 1px solid #CCC;
+}
+
+@media (max-width: 1040px) {
+.list-item {
+width: 100%;
+padding: 10px 0 10px;
+border-bottom: 1px solid #CCC;
+margin: 0 auto;
+}
+}
+
+@media (max-width: 420px) {
+.list-item {
+width: 100%;
+padding: 10px 0 10px;
+border-bottom: 1px solid #CCC;
+margin: 0 auto;
+}
 }
 
 .list-item:first-child {
@@ -60,10 +92,21 @@ section {
   font-weight: bold;
 }
 
+@media (max-width: 420px) {
+.list-item > header > h3{
+  font-size: 16px;
+  font-weight: bold;
+}
+}
+
 .list-item > header > h4{
   font-size: 13px;
 }
-
+@media (max-width: 420px) {
+.list-item > header > h4{
+font-size: 11px;
+}
+}
 .list-item > .price-wrapper {
   float: right;
 }
@@ -75,7 +118,15 @@ section {
 .list-item > .price-wrapper > .price-data > sup {
   font-size: 24px;
 }
+@media (max-width: 420px) {
+.list-item > .price-wrapper > .price-data {
+  font-size: 20px;
+}
 
+.list-item > .price-wrapper > .price-data > sup {
+  font-size: 20px;
+}
+}
 .list-item > .price-wrapper > div {
   display: block;
   font-size: 13px;
@@ -113,4 +164,17 @@ section {
   padding: 3px;
   color: rgb(146, 146, 146);
   font-size: 13px;
+}
+
+@media (max-width: 720px) {
+.space-image-wrapper > .map-number {
+  display: none;
+  }
+}
+
+@media (max-width: 420px) {
+.price-wrapper div.light-gray {
+  font-size: 10px;
+
+  }
 }
