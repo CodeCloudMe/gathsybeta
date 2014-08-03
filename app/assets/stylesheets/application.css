@@ -59,10 +59,10 @@ body {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 720px) {
   .main {
   background: white;
-  width: 100%;
+  width: 90%;
   margin: 20px auto;
   min-width: 10px;
   border-radius: 30px;
@@ -113,21 +113,21 @@ body {
   vertical-align: middle;
   line-height: 45px
 }
-@media (max-width: 600px) {
+@media (max-width: 600px) {   
 
   #user-banner {
-  display: inline-block;
-  float: left;
-  height: 45px;
-  vertical-align: middle;
-  line-height: 45px
+display: inline-block;
+float: right;
+height: 45px;
+vertical-align: middle;
+line-height: 45px;
 }
 
   }
 
 nav > ul > li {
   float: left;
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 @media (max-width: 600px) {
@@ -135,7 +135,7 @@ nav > ul > li {
   nav > ul > li {
 
     float: left;
-    margin: 0 -2px;
+    margin: 0 6px;
   
   }
 
