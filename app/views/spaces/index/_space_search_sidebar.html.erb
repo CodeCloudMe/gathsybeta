@@ -32,10 +32,20 @@ data-remote="true"
 
   <h4 class="sidebar-section-header">Guest Count</h4>
     <div class="sidebar-section group">
+
+       <select type="text" id="space-accomodates1" name="space_filters[guest_count]">
+      <% Space.numerical_options.each_with_index do |accomodates, index| %>
+        <option value="<%= accomodates%>"><%= accomodates %></option>
+      <% end %>
+    </select>
+
+    <!--
       <%= select_numerical_given_options(label: "",
                                      html_name: "space_filters[guest_count]",
                                         limits: [1,16],
-                                   plural_noun: "guests") %><br>
+                                   plural_noun: "guests") %>
+-->
+                                 <br>
     </div>
 
 

@@ -12,9 +12,16 @@
                       class: "text-input input-large",
                          id: "root-input-city-name" %>
 
+
+ <select type="text" name="space_filters[guest_count]" id="space-accomodates2">
+      <% Space.numerical_options.each_with_index do |accomodates, index| %>
+        <option value="<%= accomodates%>"><%= accomodates %> guests</option>
+      <% end %>
+    </select>
+    <!--
       <%= select_numerical_given_options(html_name: "space_filters[guest_count]",
                                        plural_noun: "guests") %>
-
+-->
       <input type="submit" value="Search" class="button blue input-large" id="search-button">
 
     </form>
