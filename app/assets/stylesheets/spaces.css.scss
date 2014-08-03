@@ -167,5 +167,8 @@ font-size: 11px;
 }
 
 @media (max-width: 420px) {
-.price-wrapper div.light-gray 
+.price-wrapper div.light-gray {
+  font-size: 10px;
+
+  }
 }
