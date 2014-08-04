@@ -30,7 +30,7 @@ The following technologies were used to build Cloudbnb:
 
 ###External APIs Consumed
  * Google Maps
- * Flickr
+
 
 ##Comments? Suggestions?
-Please feel free to send me an email at Jonathan.potter.business@gmail.com with any comments or suggestions about how I can improve the site.
+Please feel free to send us an email at m@codecloud.me with any comments or suggestions about how we can improve this.
