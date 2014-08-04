@@ -46,7 +46,7 @@ body {
   margin: 20px auto;
   min-width: 1000px;
   border-radius: 30px;
-  padding: 20px;
+  padding: 20px 0;
 }
 @media (max-width: 1100px) {
   .main {
