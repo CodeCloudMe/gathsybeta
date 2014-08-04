@@ -21,14 +21,23 @@ group :development, :test do
   gem 'capybara'
 end
 
+
+
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'geocoder'
 gem 'calendar_helper'
 gem 'flickr_fu', '~> 0.3.2'
 gem 'figaro'
-gem 'faker'
+
+#fixing error.
+#gem 'i18n'
+#gem 'faker'
+
+
 gem 'newrelic_rpm'
 gem 'launchy'
 gem 'kaminari'
 gem 'carrierwave'
+gem 'fog'
+
