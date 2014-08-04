@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <form action="<%= bookings_url %>" method="post">
+  <form action="https://www.paypal.com/uk/cgi-bin/webscr" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
     <p id="datepairExample">
@@ -42,6 +42,15 @@
     <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="/js/datepair.js"></script>
     <script type="text/javascript" src="/js/jquery.datepair.js"></script>
+
+
+    <!-- Paypal CSS files -->
+<link rel="stylesheet" type="text/css" href="/js/jPayPalCart.css" />    
+
+<!-- paypal Script files -->
+<script src="/js/jPayPalCart.js" type="text/javascript"></script>
+
+
     <script>
         // initialize input widgets first
         $('.time').timepicker({
@@ -81,8 +90,128 @@
     </div>
 
     <input type="hidden" name="booking[space_id]" value="<%= @space.id %>">
+    <div  id="myCart"></div>
+    <!--<button type="submit" class="blue button" id="space-show-sidebar-book-button">Book it</button>-->
 
-    <button type="submit" class="blue button" id="space-show-sidebar-book-button">Book it</button>
+
+    <script>
+    $(document).ready(initBook);
+
+      function initBook(){
+        styleButton();
+        listinForChange();
+        startPayPal();
+      }
+
+      function styleButton(){
+        setTimeout(function(){
+          $(':submit').css({width:'100%'})
+          $(':submit').addClass('button')
+          $(':submit').addClass('blue')
+          $(':submit').css({height:'50px'})
+        },500)
+      }
+      function go(){
+
+      }
+
+      function startPayPal(){
+        $("#myCart").PayPalCart({ business: 'm@codecloud.me',
+            notifyURL: 'http://www.gathsymike1.com/complete',
+            virtual: false,             //set to true where you are selling virtual items such as downloads
+            quantityupdate: true,       //set to false if you want to disable quantity updates in the cart 
+            currency: 'USD',            //set to your trading currency - see PayPal for valid options
+            currencysign: '$',          //set the currency symbol
+            minicartid: 'minicart',     //element to show the number of items and net value
+            persitdays: 0              //set to -1 for cookie-less cart for single page of products, 
+                                        // 0 (default) persits for the session, 
+                                        // x (number of days) the basket will persits between visits
+            });
+      }
+
+      showingAlert=true;
+      function listinForChange(){
+       setTimeout(function(){
+
+
+        try{
+           $("#myCart").PayPalCart('remove', "hours");
+
+        }
+
+        catch(er){
+
+        }
+      },1000);
+      
+
+       $('.end:nth(1), .start:nth(1), .end:nth(0), .start:nth(0)').on('change', function(){
+
+        if($('.end:nth(1)').val()==""){
+          return;
+        }
+        styleButton();
+        //  startTime= $('.start:nth(0)').val() + " " + $('.start:nth(1)').val().split('am')[0].split('pm')[0]
+         // endTime = $('.end:nth(0)').val() + " " + $('.end:nth(1)').val()
+
+         try{
+          startHour= $('.start:nth(1)').val().split('am')[0].split('pm')[0]+ ":00";
+          endHour= $('.end:nth(1)').val().split('am')[0].split('pm')[0]+ ":00";
+
+
+          startDate = new Date($('.start:nth(0)').val() + " " + startHour);
+          endDate = new Date($('.end:nth(0)').val() + " " + endHour);
+
+          if (startDate < new Date()){
+            if(showingAlert==true){
+          alert("Please select a start time after now.");
+          showingAlert=false;
+          setTimeout(function(){
+            showingAlert=true;
+          },5000)
+          }
+        }
+      }
+        catch(err){
+          if(showingAlert==true){
+          alert("There was an issue processing your dates. Please make sure you have filled out all date and time fields.");
+          showingAlert=false;
+          setTimeout(function(){
+            showingAlert=true;
+          },5000)
+        }
+
+
+          return;
+        }
+
+          hoursRes = parseFloat((endDate - startDate)/3600000);
+
+          if(hoursRes <=0){
+
+             if(showingAlert==true){
+          alert("Please select an end time after your start time");
+          showingAlert=false;
+          setTimeout(function(){
+            showingAlert=true;
+          },5000)
+            
+            return;
+          }
+        }
+
+          hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
+          $("#myCart").PayPalCart('remove', "hours");
+         $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.8);
+
+
+       })
+      }
+
+
+
+
+    </script>
 
   </form>
 
