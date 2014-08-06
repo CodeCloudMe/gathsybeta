@@ -26,12 +26,11 @@ img {
 
 
 .space-image {
-  float: left;
-  width: 118px;
-  height: 77px;
-  padding: 3px;
-  border: 1px solid #DDD;
-  border-radius: 2px;
+float: left;
+width: 25%;
+height: auto;
+padding: 3px 10px 0 5px;
+border: none;
 }
 @media (max-width: 680px) {
 .space-image {
@@ -39,7 +38,6 @@ float: left;
 width: 25%;
 padding: 3px;
 border: none;
-border-radius: 2px;
 height: auto;
 margin-right: 5px;
 }
@@ -52,7 +50,6 @@ float: left;
 width: 25%;
 padding: 3px;
 border: none;
-border-radius: 2px;
 height: auto;
 margin-right: 5px;
 }

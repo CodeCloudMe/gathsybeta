@@ -9,6 +9,14 @@ section {
 .sidebar {
   width:250px;
 }
+
+@media (max-width: 1140px) {
+.sidebar {
+  margin-right: 20px;
+}
+
+}
+
 @media (max-width: 720px) {
 .sidebar {
   display:none;
@@ -32,12 +40,29 @@ section {
   float: right;
 }
 
+@media (min-width: 1140px) {
 
+  #spaces-index-list {
+  float:left;
+  width: 64.333%;
+  margin-left: 10px;
+}
+
+}
 @media (max-width: 1140px) {
 
   #spaces-index-list {
   float:left;
   width: 64.333%;
+}
+
+}
+
+@media (max-width: 1140px) and (min-width: 720px)  {
+
+  #spaces-index-list {
+  float:left;
+  width: 61.333%;
 }
 
 }
@@ -153,18 +178,33 @@ font-size: 11px;
 }
 
 .space-image-wrapper {
+  display: block;
   position: relative;
 }
 
 .space-image-wrapper > .map-number {
-  position: absolute;
-  background: white;
-  left: -125px;
-  top: 1px;
-  padding: 3px;
-  color: rgb(146, 146, 146);
-  font-size: 13px;
+    background: none repeat scroll 0 0 white;
+    color: #929292;
+    font-size: 13px;
+    left: 0;
+    padding: 3px 0 0 7px;
+    position: absolute;
+    top: 0;
+    width: 11px;
 }
+
+@media (min-width: 720px) {
+.space-image-wrapper > .map-number {
+position: absolute;
+background: white;
+left: -20px;
+top: -6px;
+padding: 3px 0px 0 7px;
+color: #929292;
+font-size: 13px;
+}
+}
+
 
 @media (max-width: 720px) {
 .space-image-wrapper > .map-number {
