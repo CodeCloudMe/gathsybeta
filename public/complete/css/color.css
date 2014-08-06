@@ -1,0 +1,33 @@
+/*!
+ * 
+ * Ether v.1.0.0
+ * Thematic Webs
+ */
+
+.color-primary, .navbar-nav > li > a:before, .navbar-nav > li > a:after, .stat-box .stat-hover .iconic, .stat-box .stat-hover .h4, .stat-box .stat-hover a:hover, .stat-hover .h4, .meta a, .user-comments h6 {
+	color:#0ba4d6;
+}
+
+.bg-primary, a.bg-primary:hover, .btn-primary, .btn-primary:hover, .btn-gray:hover, .about-box:hover .iconic, .link-pop:hover, .link-zoom:hover, .social-section .social-links li a:hover, .pricing-table:hover .price-btm, .user-comments li li .comment-box:before {
+	background-color:#0ba4d6;
+}
+
+.heading h2:after {
+		border-color:#0ba4d6;
+}
+
+::selection {
+	background:#0ba4d6;
+}
+::-moz-selection {
+	background:#0ba4d6;
+}
+
+
+
+@media (min-width: 768px) {
+.team-box:hover .detail, .blog-box:hover .btn-gray {
+	background-color:#0ba4d6;
+}
+
+}
