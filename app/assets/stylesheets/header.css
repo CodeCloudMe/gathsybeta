@@ -125,10 +125,17 @@ li #header-button {
     font-size: 13px;
     width: 100px;
 }
+}
+@media (max-width: 375px) {
 
+    #header-search-input {
+    border-radius: 3px;
+    color: rgb(90,90,90);
+    font-size: 13px;
+    width: 200px;
+}
 
-
-  }
+}
 
 #sign-up-header, #log-in-header, #username {
   color: rgb(132, 132, 132);
