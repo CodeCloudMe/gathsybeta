@@ -74,7 +74,7 @@ body {
  .main {
 background: white;
 width: 95%;
-margin: 20px auto;
+margin: 26px auto;
 min-width: 10px;
 border-radius: 30px;
 padding: 6px;
@@ -115,7 +115,11 @@ padding: 6px;
 #site-logo > ul > li > a:visited {
   color: black;
 }
+#new-space-btn {
+   float: right;
+   margin: 0;
 
+}
 #user-banner {
   display: inline-block;
   float: right;
@@ -131,9 +135,31 @@ float: right;
 height: 45px;
 vertical-align: middle;
 line-height: 45px;
+  }
+
 }
 
+@media (max-width: 484px) { 
+
+#user-banner {
+display: inline-block;
+float: left;
+height: 45px;
+line-height: 45px;
+text-align: center;
+vertical-align: middle;
+width: 94%;
+ padding: 0 3%;
+}
+
+#user-banner > ul {
+    display: block;
+    height: 45px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
   }
+}
 
 nav > ul > li {
   float: left;
@@ -150,6 +176,14 @@ nav > ul > li {
   }
 
 }
+
+@media (max-width: 435px) {
+
+   nav > ul > li {
+    display: inline-block;
+    float: left;
+    margin: 0 6px;
+   }
 
 #space-booking-rates {
   width: 250px;

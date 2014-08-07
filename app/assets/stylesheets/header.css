@@ -47,6 +47,12 @@
   z-index: 10;
 }
 
+@media (max-width: 484px) {
+#user-nav > #user-dropdown {
+  left: 0px;
+  }
+}
+
 #user-nav > #user-dropdown > li > a {
   color: black;
 }
@@ -81,6 +87,12 @@
   border-top: 0;
   font-size: 13px;
   font-weight: bold;
+}
+
+@media (max-width: 484px) {
+#user-nav:hover > #user-dropdown > li > a {
+  padding-left: 0;
+  }
 }
 
 #user-nav:hover > #user-dropdown > li > a:first-child {

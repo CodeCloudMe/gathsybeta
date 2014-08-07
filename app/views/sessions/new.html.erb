@@ -4,19 +4,21 @@
          value="<%= form_authenticity_token %>">
 
     <label for="email-address">Email address</label>
+    <div class="input-wrapper">
       <%= tag "input", type: "email",
                 placeholder: "Email address",
                        name: "user[email]",
                       class: "input-medium input-long",
                          id: "email-address",
-                      value: @user.email %><br>
+                      value: @user.email %></div><br>
 
     <label for="email-address">Password</label>
+    <div class="input-wrapper">
       <%= tag "input", type: "password",
                 placeholder: "Password",
                        name: "user[password]",
                       class: "input-medium input-long",
-                         id: "password" %><br>
+                         id: "password" %></div><br>
 
       <%= tag "input", type: "submit",
                       value: "Sign in",

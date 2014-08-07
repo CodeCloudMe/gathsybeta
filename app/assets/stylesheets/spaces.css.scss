@@ -108,6 +108,13 @@ margin: 0 auto;
   float: left;
 }
 
+@media (max-width: 435px) {
+.list-item > header {
+  float: left;
+  max-width: 51%;
+  }
+}
+
 .list-item > .price-data {
   float: right;
 }
@@ -180,6 +187,10 @@ font-size: 11px;
 .space-image-wrapper {
   display: block;
   position: relative;
+}
+
+.price-wrapper .light-gray {
+  clear: both;
 }
 
 .space-image-wrapper > .map-number {
