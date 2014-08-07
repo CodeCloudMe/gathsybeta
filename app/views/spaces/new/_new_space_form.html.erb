@@ -3,52 +3,60 @@
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <label for="space-title">Space Title</label>
+  <div class="input-wrapper">
      <%= tag "input", type: "text",
                placeholder: "Awesome Flat Near Everything!",
                       name: "space[title]",
                      class: "input-long input-small",
-                        id: "space-title" %><br>
+                        id: "space-title" %></div><br>
 
   <label for="space-street-address">Street Address</label>
+  <div class="input-wrapper">
     <%= tag "input", type: "text",
               placeholder: "1234 Streetplace Rd.",
                      name: "space[address]",
                     class: "input-long input-small",
-                       id: "space-street-address" %><br>
+                       id: "space-street-address" %></div><br>
 
   <label for="space-city">City</label>
+  <div class="input-wrapper">
+
     <%= tag "input", type: "text",
               placeholder: "New York City, NY",
                      name: "space[city]",
                     class: "input-long input-small",
-                       id: "space-city" %><br>
+                       id: "space-city" %></div><br>
 
   <label for="space-country">Country</label>
+  <div class="input-wrapper">
     <%= tag "input", type: "text",
               placeholder: "United States of America",
                      name: "space[country]",
                     class: "input-long input-small",
-                       id: "space-country" %><br>
+                       id: "space-country" %></div><br>
 
   <label for="space-description" class="top">Description</label>
+  <div class="input-wrapper">
     <%= tag "textarea", name: "space[description]",
                  placeholder: "Super awesome description.",
                        class: "input-long input-small",
-                          id: "space-description" %></textarea><br>
+                          id: "space-description" %></textarea></div><br>
 
   <label for="space-house-rules" class="top">Rules</label>
+  <div class="input-wrapper">
     <%= tag "textarea", name: "space[house_rules]",
                  placeholder: "No Pets Allowed",
                        class: "input-long input-small",
                         value:"No Pets Allowed",
-                          id: "space-house-rules" %></textarea><br>
+                          id: "space-house-rules" %></textarea></div><br>
 
   <label for="space-booking_rates">Hourly Rental Rate</label>
+  <div class="input-wrapper">
     <%= tag "input", type: "number",
     name: "space[booking_rate_daily]",
               placeholder: "50",
                     class: "number-input input-long input-small",
-                        id: "space-booking-rate-daily" %><br>
+                        id: "space-booking-rate-daily" %></div><br>
 
   <label for="space-residence-type">Space Type</label>
     <select type="text" name="space[residence_type]" id="space-residence-type">
@@ -138,7 +146,7 @@
 
 
     <label for="placeavatar1">Main Photo</label>
-<input type="file" name="space[placeavatar1]" id="file"><br>
+<input type="file" name="space[placeavatar1]" id="file" class="input-long"><br>
 
 
   <input type="submit" class="button blue input-large label-offset-button" value="Create space">
