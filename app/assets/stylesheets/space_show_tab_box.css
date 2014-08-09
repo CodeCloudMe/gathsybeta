@@ -49,6 +49,19 @@
   height: 260px;
 }
 
+@media (max-width: 1240px) {
+.tab-box > .tab > .tab-content {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background: white;
+  padding: 0;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  }
+}
+
 .tab-box > .tab > input[type=radio]:checked ~ label {
   background: white;
   border-bottom: 1px solid white;
