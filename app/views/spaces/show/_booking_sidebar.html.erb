@@ -93,6 +93,7 @@
     <div  id="myCart"></div>
     <!--<button type="submit" class="blue button" id="space-show-sidebar-book-button">Book it</button>-->
 
+<<<<<<< HEAD
 
     <script>
     $(document).ready(initBook);
@@ -159,6 +160,152 @@
           endHour= $('.end:nth(1)').val().split('am')[0].split('pm')[0]+ ":00";
 
 
+=======
+
+    <script>
+    $(window).load(initBook);
+
+      function initBook(){
+        styleButton();
+        hideButton();
+        listinForChange();
+        startPayPal();
+      } 
+
+      function hideButton(){
+
+
+
+       $('#myCart').hide();
+       
+      }
+
+      function styleButton(){
+        setTimeout(function(){
+          $(':submit').css({width:'100%'});
+          $(':submit').addClass('button');
+          $(':submit').addClass('blue');
+          $(':submit').css({height:'50px'})
+        },500)
+      }
+      function go(){
+
+      }
+
+      function startPayPal(){
+        $("#myCart").PayPalCart({ business: 'm@codecloud.me',
+            notifyURL: 'http://gathsymike.herokuapp.com/complete',
+            virtual: false,             //set to true where you are selling virtual items such as downloads
+            quantityupdate: true,       //set to false if you want to disable quantity updates in the cart 
+            currency: 'USD',            //set to your trading currency - see PayPal for valid options
+            currencysign: '$',          //set the currency symbol
+            minicartid: 'minicart',     //element to show the number of items and net value
+            persitdays: 0              //set to -1 for cookie-less cart for single page of products, 
+                                        // 0 (default) persits for the session, 
+                                        // x (number of days) the basket will persits between visits
+            });
+      }
+
+      showingAlert=true;
+      function listinForChange(){
+
+       setTimeout(function(){
+
+
+        try{
+           $("#myCart").PayPalCart('remove', "hours");
+
+        }
+
+        catch(er){
+          console.log(er);
+        }
+      },1000);
+      
+
+       $('.end:nth(1), .start:nth(1), .end:nth(0), .start:nth(0)').on('change', function(){
+        $('#myCart').hide();
+
+       var stopIt=false;
+        $('.start, .end').each(function(){
+
+          thisVal = $(this).val();
+          if(thisVal==""){
+            stopIt = true;
+          }
+        })
+
+        if(stopIt==true){
+          return;
+        }
+        styleButton();
+        //  startTime= $('.start:nth(0)').val() + " " + $('.start:nth(1)').val().split('am')[0].split('pm')[0]
+         // endTime = $('.end:nth(0)').val() + " " + $('.end:nth(1)').val()
+
+         try{
+
+          if($('.start:nth(1)').val().indexOf("pm") != -1){
+            //if it's pm
+      
+            realStart =  parseInt($('.start:nth(1)').val().split(':')[0]) +12;
+
+        
+                
+          }
+          else{
+          
+            realStart = parseInt($('.start:nth(1)').val().split(':')[0]);
+
+
+                   if(parseInt($('.start:nth(1)').val().split(':')[0]) == 12){
+                      //alert("value start is 12")
+                    realStart=0;
+
+                   }
+          }
+           
+
+          //it's pm
+           if($('.end:nth(1)').val().indexOf("pm") != -1){
+
+
+            
+            realEnd =  parseInt($('.end:nth(1)').val().split(':')[0]) +12;
+            
+
+      
+                
+          }
+
+          //it's am
+
+          else{
+           
+            realEnd = parseInt($('.end:nth(1)').val().split(':')[0]);
+              
+                if(parseInt($('.end:nth(1)').val().split(':')[0]) == 12){
+                      // alert("value end  is 12")
+                    realEnd=0;
+
+                   }
+          }
+
+
+
+
+
+
+
+          startStr = realStart + ":"+ $('.start:nth(1)').val().split(':')[1];
+           endStr = realEnd + ":"+ $('.end:nth(1)').val().split(':')[1];
+
+
+          startHour= startStr.split('am')[0].split('pm')[0]+ ":00";
+          endHour= endStr.split('am')[0].split('pm')[0]+ ":00";
+
+               console.log(startHour);
+                console.log(endHour);
+>>>>>>> d2c515dbcb79cf421c2dc71ed8a64e769b5f47ab
           startDate = new Date($('.start:nth(0)').val() + " " + startHour);
           endDate = new Date($('.end:nth(0)').val() + " " + endHour);
 
@@ -188,6 +335,7 @@
           hoursRes = parseFloat((endDate - startDate)/3600000);
 
           if(hoursRes <=0){
+<<<<<<< HEAD
 
              if(showingAlert==true){
           alert("Please select an end time after your start time");
@@ -203,6 +351,27 @@
           hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
           $("#myCart").PayPalCart('remove', "hours");
          $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
+=======
+            
+            
+             if(showingAlert==true){
+          alert("Please select an end time after your start time");
+          showingAlert=false;
+          
+          
+          setTimeout(function(){
+            showingAlert=true;
+          },5000)
+            return;
+
+          }
+        }
+        
+          hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
+          $("#myCart").PayPalCart('remove', "hours");
+         $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
+            $('#myCart').fadeIn();
+>>>>>>> d2c515dbcb79cf421c2dc71ed8a64e769b5f47ab
 
 
        })

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿.PayPalCart 
 {
     width: 100%;
@@ -29,4 +30,37 @@
 {
     padding: 5px;
     text-align: center;
+=======
+﻿.PayPalCart 
+{
+    width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.PayPalCart TH 
+{
+    background-color: #e0e0e0;
+}
+.PayPalCartTotals 
+{
+    background: #eee;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+}
+.PayPalCart A 
+{
+    text-decoration: none;
+    color: Gray;
+}
+.PayPalCart A:hover
+{
+    font-weight: bold;
+}
+#PayPalMiniCart
+{
+    padding: 5px;
+    text-align: center;
+>>>>>>> d2c515dbcb79cf421c2dc71ed8a64e769b5f47ab
 }
