@@ -1,6 +1,7 @@
 Gathsy Beta
 ========
 
+
 SUMMARY:
 --------
 Gathsy is a fork of CloudBnB (https://github.com/jonathan-potter/cloudbnb). Backed by Rails, it replicates many of the core user-facing features of Airbnb (but for event spaces). 
