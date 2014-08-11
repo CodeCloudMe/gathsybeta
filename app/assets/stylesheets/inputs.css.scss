@@ -40,6 +40,21 @@ input, textarea {
   border: 1px solid rgb(204,204,204);
   margin: 4px 0;
 }
+
+.sidebar-section input.start, 
+.sidebar-section input.end {
+width: 45%;
+}
+
+@media (max-width: 320px) {
+
+.sidebar-section input.start, 
+.sidebar-section input.end {
+width: 100%;
+}
+
+}
+
 @media (max-width: 588px) {
 
 input, textarea {
@@ -47,6 +62,7 @@ font-size: 15px;
 border: 1px solid #cccccc;
 margin: 0px 0 1px 0;
 }
+
 
 }
 
