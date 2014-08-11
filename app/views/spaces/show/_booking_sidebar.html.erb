@@ -1,3 +1,4 @@
+
 <section class="group sidebar right">
 
 
@@ -178,19 +179,24 @@
           if($('.start:nth(1)').val().indexOf("pm") != -1){
             //if it's pm
       
-            realStart =  parseInt($('.start:nth(1)').val().split(':')[0]) +12;
+            if (parseInt($('.start:nth(1)').val().split(':')[0]) == 12) {
+                realStart = parseInt($('.start:nth(1)').val().split(':')[0]);
+            } 
 
-        
-                
+          if (parseInt($('.start:nth(1)').val().split(':')[0]) !== 12){
+            realStart = parseInt($('.start:nth(1)').val().split(':')[0]) +12;
+                }
           }
+        //it's am
           else{
           
             realStart = parseInt($('.start:nth(1)').val().split(':')[0]);
-
+            //alert("This val="+realStart);
 
                    if(parseInt($('.start:nth(1)').val().split(':')[0]) == 12){
                       //alert("value start is 12")
                     realStart=0;
+                    //alert("This val="+realStart);
 
                    }
           }
@@ -199,14 +205,14 @@
           //it's pm
            if($('.end:nth(1)').val().indexOf("pm") != -1){
 
+           if (parseInt($('.end:nth(1)').val().split(':')[0]) == 12) {
+                realEnd = parseInt($('.end:nth(1)').val().split(':')[0]);
+            } 
 
-            
-            realEnd =  parseInt($('.end:nth(1)').val().split(':')[0]) +12;
-            
-
-      
-                
-          }
+          if (parseInt($('.end:nth(1)').val().split(':')[0]) !== 12){
+            realEnd = parseInt($('.end:nth(1)').val().split(':')[0]) +12;
+                }
+        }
 
           //it's am
 
@@ -222,11 +228,6 @@
           }
 
 
-
-
-
-
-
           startStr = realStart + ":"+ $('.start:nth(1)').val().split(':')[1];
            endStr = realEnd + ":"+ $('.end:nth(1)').val().split(':')[1];
 
@@ -236,7 +237,7 @@
 
                console.log(startHour);
                 console.log(endHour);
-                
+
           startDate = new Date($('.start:nth(0)').val() + " " + startHour);
           endDate = new Date($('.end:nth(0)').val() + " " + endHour);
 
