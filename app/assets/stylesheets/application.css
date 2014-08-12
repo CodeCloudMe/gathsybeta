@@ -103,9 +103,26 @@ padding: 6px;
 #logo-banner {
   display: inline-block;
   float: left;
-  height: 45px;
   vertical-align: middle;
   line-height: 45px
+}
+
+@media (max-width: 485px) {
+#logo-banner {
+  width: 100%
+}
+#logo-banner li#search-bar {
+  float: right;
+  width: 46%;
+  text-align: right;
+}
+}
+@media (max-width: 195px) {
+#logo-banner li#search-bar {
+  float: none;
+  width: 80%;
+  text-align: center;
+}
 }
 
 #site-logo > ul > li > a:link {
@@ -132,7 +149,7 @@ padding: 6px;
   #user-banner {
 display: inline-block;
 float: right;
-height: 45px;
+height: auto;
 vertical-align: middle;
 line-height: 45px;
   }
@@ -144,7 +161,6 @@ line-height: 45px;
 #user-banner {
 display: inline-block;
 float: left;
-height: 45px;
 line-height: 45px;
 text-align: center;
 vertical-align: middle;
@@ -154,7 +170,6 @@ width: 94%;
 
 #user-banner > ul {
     display: block;
-    height: 45px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
