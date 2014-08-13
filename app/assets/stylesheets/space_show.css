@@ -60,7 +60,11 @@
     margin: 1% 0 1% 0%;
   }
 }
-
+@media only screen and (max-width: 768px) {
+  .col { 
+    margin: 1% 0 1% 0%;
+  }
+}
 @media only screen and (max-width: 768px) {
   .span_3_of_3 {
     width: 100%; 
