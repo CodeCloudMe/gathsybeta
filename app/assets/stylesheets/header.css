@@ -1,4 +1,12 @@
-
+li#logo-item { 
+  height: 46px; 
+}
+#site-logo img {
+padding: 0;
+}
+a#site-logo {
+padding: 0;
+}
 #site-logo {
   color: #1a9ce2 !important;
   display: inline;
