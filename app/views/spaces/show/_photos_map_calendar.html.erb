@@ -2,7 +2,7 @@
 
   <section class="tab" id="photo-tab">
     <input type="radio" name="photo-map-calendar-tabs" id="photo-tab-button">
-    <label for="photo-tab-button">Photo</label>
+    <!--<label for="photo-tab-button">Photo</label>-->
       <% if @space.placeavatar1? %>
     <%= image_tag @space.placeavatar1,
                   class: "tab-content",
@@ -25,13 +25,13 @@
                      id: "map" %>
   </section>
 
-  <section class="tab" id="calendar-tab">
+ <!--<section class="tab" id="calendar-tab">
     <input type="radio" name="photo-map-calendar-tabs" id="calendar-tab-button">
     <label for="calendar-tab-button">Calendar</label>
     <div class="tab-content" id="calendar-wrapper">
       <%= render partial: "shared/calendar",
                  locals: {bookings: @space.booked_dates_this_month} %>
     </div>
-  </section>
+  </section>-->
 
 </div>

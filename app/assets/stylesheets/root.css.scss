@@ -2,19 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#splash-container {
+/*#splash-container {
   background: black;
   margin: auto;
   min-width: 1024px;
+}*/
+#splash-container {
+background: black;
+/* margin: auto; */
+/* min-width: 1024px; */
+position: fixed;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+z-index: -1;
 }
-
 #splash {
+top: 0;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+min-height: 50%;
+min-width: 50%;
+}
+/*#splash {
   display: block;
   position: relative;
   width: 100%;
   margin: auto;
   padding: 0;
-}
+}*/
 
 #root-page-search-bar-container {
   position: absolute;
@@ -23,11 +43,23 @@
   right: 300px
 }
 @media (max-width: 900px) {
-  #root-page-search-bar-container {
+ /* #root-page-search-bar-container {
   position: absolute;
-  min-width: 615px;
+  min-width: 10%;
   top: 150px;
-  left: 30px
+  left: 30px;
+  width: 60%;
+}*/
+#root-page-search-bar-container {
+position: absolute;
+min-width: 10%;
+top: 150px;
+left: 19px;
+width: 78%;
+}
+#root-page-search-bar {
+width: 100%;
+padding: 0;
 }
 }
 
@@ -69,7 +101,7 @@
 
 @media (max-width: 900px) {
   #root-page-search-bar {
-    width: 45%;
+    /*width: 45%;*/
   }
 }
 
@@ -78,15 +110,24 @@
   margin: 5px 10px 0 0px;
 }
 
+@media (max-width: 435px) { 
+#header-button {
+  font-size: 15px;
+  margin: 5px 0 0 0;
+}
+}
+
 #root-input-city-name {
-  margin-left: 5px;
+  margin: 5px 0 5px 5px;
   width: 320px;
 }
 @media (max-width: 900px) {
   #root-input-city-name {
      width:82%;
-
   }
+  #root-input-city-name {
+width: 100%;
+}
 }
 
 #search-button {

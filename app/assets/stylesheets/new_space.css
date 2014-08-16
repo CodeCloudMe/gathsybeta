@@ -3,3 +3,9 @@
   width: 550px;
   display: inline-block;
 }
+@media (max-width: 484px) {
+
+#space-amenities {
+	width: 100%;
+	}
+}
