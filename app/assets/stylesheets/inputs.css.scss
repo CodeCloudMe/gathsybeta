@@ -86,7 +86,21 @@ input:focus, textarea:focus {
 .input-long {
   width: 300px;
 }
-
+@media (max-width: 900px) {
+#root-page-search-bar .input-wrapper {
+margin: 0;
+padding: initial;
+border-right: 5px solid rgba(0, 0, 0, 0.6);
+overflow: hidden;
+}
+}
+@media (min-width: 900px) {
+.input-wrapper {
+display: inline-block;
+border-right: 0;
+margin: 0 0 5px 0;
+}
+}
 @media (max-width: 588px) {
   .input-long {
   width: 100%;
@@ -97,6 +111,7 @@ overflow: hidden;
 border-right: 1px solid #ccc;
 }
 }
+
 
 /* BUTTONS */
 
