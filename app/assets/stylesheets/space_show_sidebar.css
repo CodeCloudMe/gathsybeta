@@ -6,16 +6,32 @@
   float: left;
   padding: 10px;
 }
+.sidebar-section > .price-wrapper {
+  float: left;
+  padding: 10px;
+}
 
 .sidebar > .sidebar-section > .price-wrapper > .price-data {
   font-size: 36px;
 }
+.price-wrapper > .price-data {
+  font-size: 36px;
+}
+
 
 .sidebar > .sidebar-section > .price-wrapper > .price-data > sup {
   font-size: 24px;
 }
+.price-wrapper > .price-data > sup {
+  font-size: 24px;
+}
 
 .sidebar > .sidebar-section > .price-wrapper > div {
+  display: block;
+  font-size: 13px;
+  text-align: right;
+}
+ .price-wrapper > div {
   display: block;
   font-size: 13px;
   text-align: right;
@@ -34,6 +50,7 @@
 #owner-img {
   padding: 25px;
   padding-bottom: 0px;
+  text-align: center;
 }
 
 #space-show-owner-name {

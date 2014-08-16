@@ -1,11 +1,11 @@
 <nav class="group" id="logo-banner">
   <ul>
 
-    <li>
-      <%= link_to "gathsy", root_url, method: :get, id: "site-logo" %>
+    <li id="logo-item">
+      <%= link_to image_tag("/gathsy-logo_sm.png", :alt => "Gathsy"), root_url, method: :get, id: "site-logo" %>
     </li>
 
-    <li>
+    <li id="search-bar">
       <%= render "header/header_search_bar" %>
     </li>
 

@@ -1,16 +1,15 @@
-<div id="splash-container">
-  <img src="/sliderbg-2.jpg" id="splash">
-
-  <div class="group" id="root-page-search-bar-container">
+<div class="group" id="root-page-search-bar-container">
     <h1>Find a venue</h1>
     <h3>Rent from over thousands<br> of users worldwide</h3>
   <form action="<%= spaces_url %>" class="group" id="root-page-search-bar">
 <form action="#" class="group" id="root-page-search-bar">
+  <div class="input-wrapper">
       <%= tag "input", type: "text",
                 placeholder: "What city are you booking in?",
                        name: "space_filters[city]",
                       class: "text-input input-large",
                          id: "root-input-city-name" %>
+  </div>
 
 
  <select type="text" name="space_filters[guest_count]" id="space-accomodates2">
@@ -26,4 +25,7 @@
 
     </form>
   </div>
+
+<div id="splash-container">
+  <img src="/sliderbg-2.jpg" id="splash">
 </div>

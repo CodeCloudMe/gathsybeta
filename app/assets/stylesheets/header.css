@@ -1,4 +1,12 @@
-
+li#logo-item { 
+  height: 46px; 
+}
+#site-logo img {
+padding: 0;
+}
+a#site-logo {
+padding: 0;
+}
 #site-logo {
   color: #1a9ce2 !important;
   display: inline;
@@ -22,6 +30,7 @@
   width: 100%;
   min-width: 100%;
   border-bottom: 1px solid rgb(208, 208, 208);
+  background-color: #fff;
 }
 
 #user-nav {
@@ -45,6 +54,12 @@
   top: 45px;
   right: 0px;
   z-index: 10;
+}
+
+@media (max-width: 484px) {
+#user-nav > #user-dropdown {
+  left: 0px;
+  }
 }
 
 #user-nav > #user-dropdown > li > a {
@@ -81,6 +96,12 @@
   border-top: 0;
   font-size: 13px;
   font-weight: bold;
+}
+
+@media (max-width: 484px) {
+#user-nav:hover > #user-dropdown > li > a {
+  padding-left: 0;
+  }
 }
 
 #user-nav:hover > #user-dropdown > li > a:first-child {
@@ -122,13 +143,22 @@ li #header-button {
     #header-search-input {
     border-radius: 3px;
     color: rgb(90,90,90);
-    font-size: 13px;
     width: 100px;
+  }
 }
 
+@media (min-width: 320px) and (max-width: 480px){
 
-
+    #header-search-input {
+    width: 84%;
   }
+}
+@media (max-width: 240px) {
+
+    #header-search-input {
+    width: 68px;
+  }
+}
 
 #sign-up-header, #log-in-header, #username {
   color: rgb(132, 132, 132);
