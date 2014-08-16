@@ -1,4 +1,39 @@
-<section class="group sidebar right">
+<!-- This enitre file isnt being used
+It has been copied into spaces/show/show.html.erb -->
+
+
+
+<!-- This enitre file isnt being used
+It has been copied into spaces/show/show.html.erb -->
+
+
+
+<!-- This enitre file isnt being used
+It has been copied into spaces/show/show.html.erb -->
+
+
+
+
+<!-- This enitre file isnt being used
+It has been copied into spaces/show/show.html.erb -->
+
+
+
+<!-- This enitre file isnt being used
+It has been copied into spaces/show/show.html.erb -->
+
+
+
+
+<!-- This enitre file isnt being used
+It has been copied into spaces/show/show.html.erb -->
+
+
+
+
+
+
+<!--<section class="group sidebar right">
 
 
   <h4 class="sidebar-section-header" id="top-of-sidebar"><%= @space.title %></h4>
@@ -41,7 +76,7 @@
     <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
     <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="/js/datepair.js"></script>
-    <script type="text/javascript" src="/js/jquery.datepair.js"></script>
+    <script type="text/javascript" src="/js/jquery.datepair.js"></script>-->
 
 
     <!-- Paypal CSS files -->
@@ -93,21 +128,29 @@
     <div  id="myCart"></div>
     <!--<button type="submit" class="blue button" id="space-show-sidebar-book-button">Book it</button>-->
 
-
     <script>
-    $(document).ready(initBook);
+    $(window).load(initBook);
 
       function initBook(){
         styleButton();
+        hideButton();
         listinForChange();
         startPayPal();
+      } 
+
+      function hideButton(){
+
+
+
+       $('#myCart').hide();
+       
       }
 
       function styleButton(){
         setTimeout(function(){
-          $(':submit').css({width:'100%'})
-          $(':submit').addClass('button')
-          $(':submit').addClass('blue')
+          $(':submit').css({width:'100%'});
+          $(':submit').addClass('button');
+          $(':submit').addClass('blue');
           $(':submit').css({height:'50px'})
         },500)
       }
@@ -131,6 +174,7 @@
 
       showingAlert=true;
       function listinForChange(){
+
        setTimeout(function(){
 
 
@@ -140,14 +184,24 @@
         }
 
         catch(er){
-
+          console.log(er);
         }
       },1000);
       
 
        $('.end:nth(1), .start:nth(1), .end:nth(0), .start:nth(0)').on('change', function(){
+        $('#myCart').hide();
 
-        if($('.end:nth(1)').val()==""){
+       var stopIt=false;
+        $('.start, .end').each(function(){
+
+          thisVal = $(this).val();
+          if(thisVal==""){
+            stopIt = true;
+          }
+        })
+
+        if(stopIt==true){
           return;
         }
         styleButton();
@@ -155,9 +209,68 @@
          // endTime = $('.end:nth(0)').val() + " " + $('.end:nth(1)').val()
 
          try{
-          startHour= $('.start:nth(1)').val().split('am')[0].split('pm')[0]+ ":00";
-          endHour= $('.end:nth(1)').val().split('am')[0].split('pm')[0]+ ":00";
 
+          if($('.start:nth(1)').val().indexOf("pm") != -1){
+            //if it's pm
+      
+            if (parseInt($('.start:nth(1)').val().split(':')[0]) == 12) {
+                realStart = parseInt($('.start:nth(1)').val().split(':')[0]);
+            } 
+
+          if (parseInt($('.start:nth(1)').val().split(':')[0]) !== 12){
+            realStart = parseInt($('.start:nth(1)').val().split(':')[0]) +12;
+                }
+          }
+        //it's am
+          else{
+          
+            realStart = parseInt($('.start:nth(1)').val().split(':')[0]);
+            //alert("This val="+realStart);
+
+                   if(parseInt($('.start:nth(1)').val().split(':')[0]) == 12){
+                      //alert("value start is 12")
+                    realStart=0;
+                    //alert("This val="+realStart);
+
+                   }
+          }
+           
+
+          //it's pm
+           if($('.end:nth(1)').val().indexOf("pm") != -1){
+
+           if (parseInt($('.end:nth(1)').val().split(':')[0]) == 12) {
+                realEnd = parseInt($('.end:nth(1)').val().split(':')[0]);
+            } 
+
+          if (parseInt($('.end:nth(1)').val().split(':')[0]) !== 12){
+            realEnd = parseInt($('.end:nth(1)').val().split(':')[0]) +12;
+                }
+        }
+
+          //it's am
+
+          else{
+           
+            realEnd = parseInt($('.end:nth(1)').val().split(':')[0]);
+              
+                if(parseInt($('.end:nth(1)').val().split(':')[0]) == 12){
+                      // alert("value end  is 12")
+                    realEnd=0;
+
+                   }
+          }
+
+
+          startStr = realStart + ":"+ $('.start:nth(1)').val().split(':')[1];
+           endStr = realEnd + ":"+ $('.end:nth(1)').val().split(':')[1];
+
+
+          startHour= startStr.split('am')[0].split('pm')[0]+ ":00";
+          endHour= endStr.split('am')[0].split('pm')[0]+ ":00";
+
+               console.log(startHour);
+                console.log(endHour);
 
           startDate = new Date($('.start:nth(0)').val() + " " + startHour);
           endDate = new Date($('.end:nth(0)').val() + " " + endHour);
@@ -188,21 +301,23 @@
           hoursRes = parseFloat((endDate - startDate)/3600000);
 
           if(hoursRes <=0){
-
              if(showingAlert==true){
           alert("Please select an end time after your start time");
           showingAlert=false;
+          
+          
           setTimeout(function(){
             showingAlert=true;
           },5000)
-            
             return;
+
           }
         }
-
+        
           hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
           $("#myCart").PayPalCart('remove', "hours");
          $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
+            $('#myCart').fadeIn();
 
 
        })
