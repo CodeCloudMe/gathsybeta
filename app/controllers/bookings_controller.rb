@@ -34,6 +34,8 @@ class BookingsController < ApplicationController
   end
 
   def create
+     # Tell the UserMailer to send a welcome Email after save
+      Emailer.booking_created_email(@user).deliver
     @booking = Booking.new(params[:booking])
     unless @booking.has_initial_form_attributes
       flash[:notices] = ["you must fill out the booking form in order to book"]
