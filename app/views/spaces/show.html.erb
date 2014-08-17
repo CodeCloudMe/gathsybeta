@@ -160,8 +160,7 @@
 
       }
 
-      function startPayPal(){
-        $("#myCart").PayPalCart({ business: 'skyclubcoders@gmail.com',
+      payInfo = { business: 'skyclubcoders@gmail.com',
             notifyURL: 'http://gathsykirk.herokuapp.com/complete',
             virtual: false,             //set to true where you are selling virtual items such as downloads
             quantityupdate: true,       //set to false if you want to disable quantity updates in the cart 
@@ -171,7 +170,11 @@
             persitdays: 0              //set to -1 for cookie-less cart for single page of products, 
                                         // 0 (default) persits for the session, 
                                         // x (number of days) the basket will persits between visits
-            });
+            };
+
+
+      function startPayPal(){
+        $("#myCart").PayPalCart(payInfo);
       }
 
       showingAlert=true;
@@ -316,6 +319,9 @@
           }
         }
         
+               oldUrl = payInfo['notifyURL'];
+          payInfo['notifyURL']= "";
+          payInfo['notifyURL'] = oldUrl + "?startTime="+startDate+"&endTime="+endDate+"&url"=window.location.href;
           hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
           $("#myCart").PayPalCart('remove', "hours");
          $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
