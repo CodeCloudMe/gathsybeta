@@ -40,7 +40,7 @@ class SpacesController < ApplicationController
 
     if @space.save
        # Tell the UserMailer to send an email when new booking was created
-      Emailer.new_space_email(@space).deliver
+      Emailer.new_space_email(current_user).deliver
       #space_photo = SpacePhoto.unattached_photo
       #space_photo.update_attributes(space_id: @space.id)
       redirect_to @space
