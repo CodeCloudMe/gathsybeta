@@ -10,7 +10,7 @@ $(document).ready(function() {
           url: $(this).attr('action'), //sumbits it to the given url of the form
           data: valuesToSubmit,
           dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-        }).on("ajax:success", function(event, data){
+        }).success(function(event, data){
           $("#space-list-wrapper").html(data);
             initializeMap();
           });
