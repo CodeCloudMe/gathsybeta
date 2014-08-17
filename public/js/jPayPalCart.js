@@ -105,10 +105,11 @@
         if (theDiv.settings.virtual) {
             theform += '<input type="hidden" name="no_shipping" value="1">\r\n';
         }
-        alert(theDiv.settings.notifyURL);
+        //alert(theDiv.settings.notifyURL);
 
         if (theDiv.settings.notifyURL != '') {
             theform += '<input type="hidden" name="notify_url" value="' + theDiv.settings.notifyURL + '" />\r\n';
+            theform += '<input type="hidden" name="return" value="' + theDiv.settings.notifyURL + '" />\r\n';
         }
         theform += '<table class="PayPalCart">\r\n';
         theform += '<tr><th>&nbsp;</th><th align="left">Description</th><th align="center">Qty</th><th align="right">Price</th></tr>\r\n';
