@@ -6,7 +6,7 @@ $(document).ready(function() {
   //   });
   // });
 
-	$("space-index-sidebar-filter-button").on("click", function(){
+	$("#space-index-sidebar-filter-button").on("click", function(){
 		$("#space-index-filter-form").submit();
 	});
 
