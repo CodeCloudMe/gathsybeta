@@ -323,6 +323,7 @@
           payInfo['notifyURL']= "";
           payInfo['notifyURL'] = oldUrl + "?startTime="+ encodeURIComponent(startDate.toString())+"&endTime="+ encodeURIComponent(endDate.toString())+"&url="+window.location.href;
 
+            alert(oldUrl + "?startTime="+ encodeURIComponent(startDate.toString())+"&endTime="+ encodeURIComponent(endDate.toString())+"&url="+window.location.href);
           $('#retInfo').val(oldUrl + "?startTime="+ encodeURIComponent(startDate.toString())+"&endTime="+ encodeURIComponent(endDate.toString())+"&url="+window.location.href);
           hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
           $("#myCart").PayPalCart('remove', "hours");
