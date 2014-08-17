@@ -6,7 +6,12 @@ $(document).ready(function() {
   //   });
   // });
 
-	$("#space-index-sidebar-filter-button").on("click", function(){
+  $('#space-index-filter-form').bind('submit', function(event) {
+
+     return false;
+  });
+
+	$("#space-index-sidebar-filter-button").bind("click", function(){
 		$("#space-index-filter-form").submit();
 	});
 
