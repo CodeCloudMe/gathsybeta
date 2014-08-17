@@ -321,7 +321,7 @@
         
                oldUrl = payInfo['notifyURL'];
           payInfo['notifyURL']= "";
-          payInfo['notifyURL'] = oldUrl + "?startTime="+startDate+"&endTime="+endDate+"&url="+window.location.href;
+          payInfo['notifyURL'] = oldUrl + "?startTime="+startDate.toString()+"&endTime="+endDate.toString()+"&url="+window.location.href;
           hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
           $("#myCart").PayPalCart('remove', "hours");
          $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
