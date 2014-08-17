@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
 
   def create
      # Tell the UserMailer to send an email when new booking was created
-      Emailer.booking_created_email(@user).deliver
+      Emailer.book_email(@user).deliver
     @booking = Booking.new(params[:booking])
     unless @booking.has_initial_form_attributes
       flash[:notices] = ["you must fill out the booking form in order to book"]
@@ -98,6 +98,8 @@ class BookingsController < ApplicationController
   end
 
   def book
+      # Tell the UserMailer to send an email when new booking was created
+      Emailer.booking_created_email(@user).deliver
     @booking = Booking.find_by_id(params[:id])
 
     if @booking.user_id == current_user.id
