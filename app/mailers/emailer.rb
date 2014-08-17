@@ -12,7 +12,7 @@ class Emailer < ActionMailer::Base
     @user = user
     @url  = "http://gathsykirk.herokuapp.com"
     @from = 'info@gathsykirk.herokuapp.com'
-    mail(:to => user.email, :subject => "You've created a new space on Gathsy", :from => @from)
+    mail(:to => user.email, :subject => "<div style='font-size:20px'>You've created a new space on Gathsy</div>", :from => @from)
   end
 
   def book_email(user)

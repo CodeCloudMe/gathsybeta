@@ -34,8 +34,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-     # Tell the UserMailer to send an email when new booking was created
-      Emailer.book_email(@user).deliver
     @booking = Booking.new(params[:booking])
     unless @booking.has_initial_form_attributes
       flash[:notices] = ["you must fill out the booking form in order to book"]
@@ -54,6 +52,8 @@ class BookingsController < ApplicationController
 
       if @booking.is_free_of_conflicts?
         if @booking.save
+           # Tell the UserMailer to send an email when new booking was created
+          Emailer.book_email(current_user).deliver
           redirect_to edit_space_booking_url(@booking.space_id, @booking.id)
         else
           render status: 422
