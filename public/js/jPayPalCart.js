@@ -105,8 +105,8 @@
         if (theDiv.settings.virtual) {
             theform += '<input type="hidden" name="no_shipping" value="1">\r\n';
         }
-        alert("theDiv.settings.notifyURL");
-        
+        alert(theDiv.settings.notifyURL);
+
         if (theDiv.settings.notifyURL != '') {
             theform += '<input type="hidden" name="notify_url" value="' + theDiv.settings.notifyURL + '" />\r\n';
         }
