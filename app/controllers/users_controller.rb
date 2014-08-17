@@ -18,6 +18,8 @@ class UsersController < ApplicationController
 
 
     if @user.save
+      # Tell the UserMailer to send a welcome Email after save
+      Emailer.welcome_email(@user).deliver
       user_photo = UserPhoto.unattached_photo
       #user_photo.update_attributes(user_id: @user.id)
       login_user!(@user)
