@@ -160,15 +160,15 @@ line-height: 45px;
 
 
 #user-banner {
-display: inline-block;
-float: left;
-line-height: 45px;
-text-align: center;
-vertical-align: middle;
-width: 94%;
- padding: 0 3%;
- background: #000;
- margin-bottom: 16px;
+  display: inline-block;
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  width: 94%;
+  padding: 0 3%;
+  background: #000;
+  margin-bottom: 16px;
 }
 
 #user-banner > ul {
