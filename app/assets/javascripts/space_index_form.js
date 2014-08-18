@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#space-index-filter-form").find(":input").each(function(){
     $(this).change(function(){
-      $("#space-index-filter-form").attr('data-remote',true).trigger('submit.rails');
+      $("#space-index-filter-form").trigger('click');
     });
   });
 
