@@ -22,7 +22,7 @@ group :development, :test do
 end
 
 
-gem 'jquery-rails', '~> 3.1.1'
+gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'geocoder'
 gem 'calendar_helper'
