@@ -7,7 +7,7 @@ $(document).ready(function() {
   // });
 
 	$("#space-index-sidebar-filter-button").on("click", function(){
-		$("#space-index-filter-form").trigger('click');
+		$("#space-index-filter-form").trigger("submit.rails");
 	});
 
   $("#space-index-filter-form").on("ajax:success", function(event, data){
