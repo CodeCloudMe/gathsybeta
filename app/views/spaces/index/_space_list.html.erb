@@ -3,7 +3,7 @@
   <% @spaces ||= spaces %>
 
   <script type="application/json" id="bootstrap">
-    <%= @spaces.to_json.html_safe; %>
+    <%= @spaces.to_json.html_safe %>
   </script>
 
   <%= render partial:"spaces/index/space", collection: @spaces %>

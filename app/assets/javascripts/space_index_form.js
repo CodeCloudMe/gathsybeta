@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#space-index-filter-form").find(":input").each(function(){
     $(this).change(function(){
-      $("#space-index-filter-form").submit();
+      $("#space-index-filter-form").trigger('submit.rails');
     });
   });
 
