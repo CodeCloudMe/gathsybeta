@@ -14,6 +14,12 @@ AirbnbClone::Application.routes.draw do
     resources :bookings, only: [:edit, :index]
   end
 
+  resources :spaces do
+    collection do
+        get 'allspaces'  
+    end
+  end
+
   resources :bookings, only: [:index, :create, :show] do
     member do
       put "cancel_by_user"

@@ -20,6 +20,15 @@ class SpacesController < ApplicationController
 
   end
 
+  def allspaces
+  @spaces = space_relation.page(selected_page).per(14)
+
+  respond_to do |format|
+    format.html # index.html.erb
+    format.json  { render :json => @spaces }
+  end
+end
+
   def show
     @space = Space.find(params[:id])
   end
