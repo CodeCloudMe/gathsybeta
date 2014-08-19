@@ -31,7 +31,6 @@ GEM
     addressable (2.3.6)
     arel (3.0.3)
     bcrypt-ruby (3.0.1)
-    bcrypt-ruby (3.0.1-x86-mingw32)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -117,11 +116,9 @@ GEM
       mini_portile (= 0.6.0)
       mini_portile (= 0.6.0)
       mini_portile (= 0.6.0)
-    nokogiri (1.6.3.1-x86-mingw32)
       mini_portile (= 0.6.0)
     open4 (1.3.4)
     pg (0.17.1)
-    pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
@@ -177,7 +174,6 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.9)
-    sqlite3 (1.3.9-x86-mingw32)
     thor (0.19.1)
     tilt (1.4.1)
     treetop (1.4.15)
@@ -193,7 +189,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
