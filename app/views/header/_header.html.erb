@@ -1,4 +1,23 @@
 <header class="group" id="site-header">
   <%= render "header/logo_search_bar" %>
   <%= render "header/login_logout_banner" %>
+
+ <script type="text/javascript">
+	if (document.getElementsByTagName) {
+
+		var inputElements = document.getElementsByTagName(“input”);
+
+		for (i=0; inputElements[i]; i++) {
+
+			if (inputElements[i].className && (inputElements[i].className.indexOf(“disableAutoComplete”) != -1)) {
+
+				inputElements[i].setAttribute(“autocomplete”,”off”);
+
+			}
+
+		}
+
+	}
+</script>
+
 </header>
