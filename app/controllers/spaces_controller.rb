@@ -22,10 +22,6 @@ class SpacesController < ApplicationController
 
   def show
     @space = Space.find(params[:id])
-      respond_to do |format|
-      format.html
-      format.json
-    end
   end
 
   def new
