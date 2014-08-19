@@ -2,11 +2,11 @@
 
   <div>
 
-  	 <% if !@user.avatar? %>
+  	 <% if !@user.avatar?; %>
 
   	<%= link_to image_tag(@user.photo_medium, class: "user-image-medium centered", id: "user-image"), @user, method: :get %>
   	<%end %>
-  	<% if @user.avatar? %>
+  	<% if @user.avatar?; %>
 
   	<%= link_to image_tag(@user.avatar_url, class: "user-image-medium centered", id: "user-image"), @user, method: :get %>
   	<%end %>
