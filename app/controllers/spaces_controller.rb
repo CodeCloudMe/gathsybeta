@@ -17,7 +17,7 @@ class SpacesController < ApplicationController
 
       respond_to do |format|
         format.html # index.html.erb
-        format.json  { render :json => @spaces }
+        format.json  { render :json => @spaces.to_json.html_safe }
       end
     else
       render :index
