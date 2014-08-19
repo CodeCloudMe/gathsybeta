@@ -23,7 +23,8 @@ class SpacesController < ApplicationController
   def show
     @space = Space.find(params[:id])
       respond_to do |format|
-      format.json render :partial => "spaces/show.json"
+      format.html
+      format.json
     end
   end
 
