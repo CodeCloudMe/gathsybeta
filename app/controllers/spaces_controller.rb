@@ -14,20 +14,15 @@ class SpacesController < ApplicationController
 
     if request.xhr?
       render partial: "spaces/index/space_list", locals: {spaces: @spaces}
+
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json  { render :json => @spaces }
     else
       render :index
     end
 
   end
-
-  def allspaces
-  @spaces = space_relation.page(selected_page).per(14)
-
-  respond_to do |format|
-    format.html # index.html.erb
-    format.json  { render :json => @spaces }
-  end
-end
 
   def show
     @space = Space.find(params[:id])

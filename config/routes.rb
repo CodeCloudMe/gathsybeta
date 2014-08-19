@@ -16,7 +16,7 @@ AirbnbClone::Application.routes.draw do
 
   resources :spaces do
     collection do
-        get 'allspaces'  
+        get 'index'  
     end
   end
 
