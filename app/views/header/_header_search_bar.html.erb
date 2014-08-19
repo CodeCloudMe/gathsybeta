@@ -76,3 +76,10 @@ jQuery(function ()
                        id: "header-search-input" %><br>
 
 </form>-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$(':input').live('focus',function(){
+		$(this).attr('autocomplete', 'off');
+	});
+});
+</script>
